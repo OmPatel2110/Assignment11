@@ -22,7 +22,6 @@ jobs:
     - name: Create output directory
       run: |
         mkdir -p output
-        ls -l  # To confirm that the output directory is created
 
     - name: Run tests for test1
       run: |
