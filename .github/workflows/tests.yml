@@ -24,15 +24,15 @@ jobs:
 
     - name: Run tests for test1
       run: |
-        python3 find_lowest_number.py test_data/test1_input.txt output/test1_output.txt
+        python find_lowest_number.py test_data/test1_input.txt output/test1_output.txt
         diff -q output/test1_output.txt tests/test1_expected.txt
 
     - name: Run tests for test2
       run: |
-        python3 find_lowest_number.py test_data/test2_input.txt output/test2_output.txt
+        python find_lowest_number.py test_data/test2_input.txt output/test2_output.txt
         diff -q output/test2_output.txt tests/test2_expected.txt
 
     - name: Run tests for test3
       run: |
-        python3 find_lowest_number.py test_data/test3_input.txt output/test3_output.txt
+        python find_lowest_number.py test_data/test3_input.txt output/test3_output.txt
         diff -q output/test3_output.txt tests/test3_expected.txt
