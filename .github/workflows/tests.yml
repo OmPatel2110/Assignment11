@@ -1,0 +1,38 @@
+name: Test find_lowest_number.py
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: Automated Tests
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.x"
+
+    - name: Create output directory
+      run: mkdir -p output
+
+    - name: Run tests for test1
+      run: |
+        python3 find_lowest_number.py test_data/test1_input.txt output/test1_output.txt
+        diff -q output/test1_output.txt tests/test1_expected.txt
+
+    - name: Run tests for test2
+      run: |
+        python3 find_lowest_number.py test_data/test2_input.txt output/test2_output.txt
+        diff -q output/test2_output.txt tests/test2_expected.txt
+
+    - name: Run tests for test3
+      run: |
+        python3 find_lowest_number.py test_data/test3_input.txt output/test3_output.txt
+        diff -q output/test3_output.txt tests/test3_expected.txt
