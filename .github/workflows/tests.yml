@@ -1,7 +1,6 @@
 name: Test find_lowest_number.py
 
-on:
-  push:
+on: push
     branches:
       - main
 
