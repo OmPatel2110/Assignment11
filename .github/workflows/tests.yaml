@@ -1,8 +1,11 @@
-name: Test find_lowest_number.py
+name: find_lowest_number.py
 
-on: push
+
+on:
+  push:
     branches:
       - main
+
 
 jobs:
   test:
